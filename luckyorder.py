@@ -77,7 +77,7 @@ async def handle_message(update: Update, context: CallbackContext):
                 logger.info(f"GROUP_CHAT_ID: {GROUP_CHAT_ID}")
                 logger.info("Условие выполняется")
                 original_message = update.message.reply_to_message.text
-                await context.bot.send_message(GROUP_CHAT_ID, f"Ответ от таксиста: {update.message.text}")
+                await context.bot.send_message(GROUP_CHAT_ID, f" {update.message.text}")
 
     except Exception as e:
         logger.error(f"Ошибка при обработке сообщения: {e}")
